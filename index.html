@@ -673,6 +673,8 @@
     });
   }, { threshold: 0.4 });
   slides.forEach(s => io.observe(s));
+  // Trigger first slide immediately
+  slides[0].classList.add('visible');
 
   document.addEventListener('keydown', e => {
     const cur = [...slides].findIndex(s => {
